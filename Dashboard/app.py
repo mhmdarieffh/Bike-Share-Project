@@ -8,7 +8,7 @@ st.title('Bike Sharing Dashboard')
 # Load the data
 @st.cache_data
 def load_data():
-    data_path = 'days_data.csv'  # Update this path
+    data_path = 'Dashboard/days_data.csv'  # Update this path
     df = pd.read_csv(data_path)
     df['date'] = pd.to_datetime(df['date'])  # Convert 'date' to datetime
     df['year_month'] = df['date'].dt.strftime('%Y-%m')  # Add 'year_month' for monthly trends
